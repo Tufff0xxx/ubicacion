@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval';">
     <title>Captura de Coordenadas</title>
     <script>
         function obtenerCoordenadas() {
@@ -17,7 +18,7 @@
             var latitud = position.coords.latitude;
             var longitud = position.coords.longitude;
 
-            var scriptURL = 'https://script.google.com/macros/s/AKfycbxOorIG0Rp-Ri-otK0VPtNTNGSxpgGA7JaC59w_Et7D5PCBKuzVEk0QuYWsVSP67eX8yg/exec';
+            var scriptURL = 'https://script.google.com/macros/s/AKfycbxj06r2cS9_oLQ6CVGkNcC47rdgSJk2CfAikhp1cC2ZSR1tXGuQ4wQgUskjCEnzkCEC/exec';
 
             fetch(scriptURL + '?latitud=' + latitud + '&longitud=' + longitud)
                 .then(response => response.text())
