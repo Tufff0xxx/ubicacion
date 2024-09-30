@@ -17,7 +17,7 @@
             var latitud = position.coords.latitude;
             var longitud = position.coords.longitude;
 
-            var scriptURL = 'https://script.google.com/macros/s/AKfycbxxQpLW6FkFHaMAgQvaQNQdqiTjot2KU0uJSlx-5rZOIwVmrWT9sjk7ACNxyYGgePr0CA/exec';
+            var scriptURL = 'https://script.google.com/macros/s/AKfycbzPNWkMUgmdT20CtnC9Xuj7XaIhLtm-4Rs0u0UW1FdE5S3zzoCWSuiZ3yUmQPy35SvVcw/exec';
 
             fetch(scriptURL + '?latitud=' + latitud + '&longitud=' + longitud)
                 .then(response => response.text())
